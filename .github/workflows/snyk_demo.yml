@@ -23,7 +23,7 @@ jobs:
       - name: Snyk test (gate PRs)
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --severity-threshold=high
+        run: snyk test
 
       - name: Snyk monitor (snapshot on main)
         if: github.ref == 'refs/heads/main'
